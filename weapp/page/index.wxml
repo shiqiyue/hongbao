@@ -1,19 +1,13 @@
 <view class="wrap">
   <form bindsubmit="formSubmit">
     <view class="label">要领取最佳红包的手机号码</view>
-    <view class="input">
-      <input type="number" maxlength="11" placeholder="11位手机号码" />
-    </view>
+    <input class="input" type="number" maxlength="11" placeholder="11位手机号码" />
     <view class="label">饿了么、美团分享出来的红包链接</view>
-    <view class="input">
-      <input type="text" placeholder="红包完整 URL 链接" />
-    </view>
+    <input class="input" type="text" placeholder="红包完整 URL 链接" />
     <view class="tip">饿了么：https://h5.ele.me/hongbao/开头的链接</view>
     <view class="tip">美团：https://activity.waimai.meituan.com/开头的链接</view>
     <view class="tip">短链接：http://url.cn/开头的链接</view>
-    <view class="button">
-      <button>马上领取</button>
-    </view>
+    <button class="button">马上领取</button>
   </form>
   <view class="helps">
     <view class="help">
@@ -30,6 +24,6 @@
   <view class="qrcode">
     <image mode="widthFix" src="../image/qrcode.png" />
     <view class="qrcodet">红包分享交流微信群</view>
-    <view class="qrcodet">请加上面的微信号邀请你入群</view>
+    <view>请加上面的微信号邀请你入群</view>
   </view>
 </view>
