@@ -13,7 +13,7 @@ script:
     git config user.email 'i@zhuweiyou.com';
     git push https://${GITEE_TOKEN}@gitee.com/game-helper/eleme.git master -f;
 
-    cd client;
+    cd web;
     npm i;
     npm run build;
 
