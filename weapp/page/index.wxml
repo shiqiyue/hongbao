@@ -1,13 +1,13 @@
 <view class="wrap">
-  <form bindsubmit="formSubmit">
+  <form bindsubmit="getHongbao">
     <view class="label">要领取最佳红包的手机号码</view>
-    <input class="input" type="number" maxlength="11" placeholder="11位手机号码" />
+    <input class="input" name="mobile" type="number" maxlength="11" placeholder="11位手机号码" value="{{mobile}}" />
     <view class="label">饿了么、美团分享出来的红包链接</view>
-    <input class="input" type="text" placeholder="红包完整 URL 链接" />
+    <input class="input" name="url" type="text" placeholder="红包完整 URL 链接" />
     <view class="tip">饿了么：https://h5.ele.me/hongbao/开头的链接</view>
     <view class="tip">美团：https://activity.waimai.meituan.com/开头的链接</view>
     <view class="tip">短链接：http://url.cn/开头的链接</view>
-    <button class="button">马上领取</button>
+    <button formType="submit" class="button {{submit ? 'disabled' : ''}}">{{submit ? '正在领取...' : '马上领取'}}</button>
   </form>
   <view class="helps">
     <view class="help">
