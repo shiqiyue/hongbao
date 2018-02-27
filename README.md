@@ -11,7 +11,8 @@
 ## 目录
 
 - [server](server) - 服务端
-- [client](client) - 网页客户端（后续可能增加其它客户端）
+- [weapp](weapp) - 小程序端
+- [web](web) - 网页端
 
 ## 交流群
 
