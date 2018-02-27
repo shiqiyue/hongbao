@@ -12,7 +12,7 @@ Page({
     const {url, mobile} = event.detail.value
     this.setData({submit: true})
     wx.request({
-      url: 'http://101.132.113.122:3007/hongbao',
+      url: 'https://hongbao.xxooweb.com/hongbao',
       data: {url, mobile},
       method: 'POST',
       success: ({data}) => wx.showModal({
