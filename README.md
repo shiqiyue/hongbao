@@ -12,11 +12,6 @@
 
 <table>
   <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr></tr>
-  <tr>
     <td><a href="server">server</a></td>
     <td>服务端</td>
     <td></td>
