@@ -33,7 +33,7 @@ Page({
   },
   onShareAppMessage () {
     return {
-      title: '一键领取手气最佳红包（饿了么、美团）',
+      title: '一键领取饿了么、美团手气最佳红包',
       path: '/page/index'
     }
   }
