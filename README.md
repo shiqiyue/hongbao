@@ -11,7 +11,7 @@
 ## 目录
 
 - [server](server) - 服务端
-- [weapp](weapp) - 小程序端
+- [weapp](weapp) - 小程序
 - [web](web) - 网页端
 
 ## 交流群

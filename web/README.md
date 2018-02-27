@@ -1,4 +1,6 @@
-# hongbao/client
+# hongbao/web
+
+网页端
 
 ## 开发与部署
 
