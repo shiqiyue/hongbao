@@ -28,7 +28,7 @@
     </view>
   </view>
   <view class="qrcode">
-    <img src="../image/qrcode.png" />
+    <image mode="widthFix" src="../image/qrcode.png" />
     <view class="qrcodet">红包分享交流微信群</view>
     <view class="qrcodet">请加上面的微信号邀请你入群</view>
   </view>
