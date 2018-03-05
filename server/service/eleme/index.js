@@ -2,13 +2,18 @@ const axios = require('axios')
 const querystring = require('querystring')
 const cookie = require('./cookie')
 const randomPhone = require('../random-phone')
+const logger = require('../logger')
+const random = require('../random')
 
 const origin = 'https://h5.ele.me'
 
 async function request ({mobile, url} = {}) {
   const query = querystring.parse(url)
 
-  let index = 0
+  // 一定程度上错开了大家都同时从 0 绑的情况，虽然可能没什么卵用。
+  // 10：因为饿了么红包最多 10 人领，至少给后面留 10 个位置
+  let index = random(0, cookie.length - 10)
+
   const request = axios.create({
     baseURL: origin,
     withCredentials: true,
@@ -39,7 +44,7 @@ async function request ({mobile, url} = {}) {
       sign: sns.eleme_key,
       phone
     })
-    console.log('绑定手机号', phone)
+    logger.info('绑定手机号', phone)
 
     // 领红包
     // eslint-disable-next-line camelcase
@@ -63,13 +68,13 @@ async function request ({mobile, url} = {}) {
     if (number <= 0) {
       // 有时候领取成功了，但是没有返回 lucky，再调一次就可以了
       const lucky = promotion_records.find(r => r.is_lucky) || await lottery(phone)
-      console.log('手气最佳红包已被领取', JSON.stringify(lucky))
-      return lucky
-        ? `红包领取完毕\n\n手气最佳：${lucky.sns_username}\n红包金额：${lucky.amount} 元`
+      logger.info('手气最佳红包已被领取', JSON.stringify(lucky))
+      return (lucky && lucky.amount)
+        ? `手气最佳红包已被领取\n\n手气最佳：${lucky.sns_username}\n红包金额：${lucky.amount} 元`
         : '红包被人抢完\n或\n服务器繁忙'
     }
 
-    console.log(`还要领 ${number} 个红包才是手气最佳`)
+    logger.info(`还要领 ${number} 个红包才是手气最佳`)
     index++
 
     // 如果这个是最佳红包，换成指定的手机号领取
@@ -82,7 +87,7 @@ function response (options) {
     try {
       resolve({message: await request(options)})
     } catch (e) {
-      console.error(e.message)
+      logger.error(e.message)
       resolve({
         message: e.message,
         status: (e.response || {}).status

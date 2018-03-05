@@ -10,8 +10,33 @@
 
 ## 目录
 
-- [server](server) - 服务端
-- [client](client) - 网页客户端（后续可能增加其它客户端）
+<table>
+  <tr>
+    <td>服务端</td>
+    <td><a href="server">server</a></td>
+    <td>https://hongbao.xxooweb.com/</td>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td>网页端</td>
+    <td><a href="web">web</a></td>
+    <td>http://www.elemhb.top/</td>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td>小程序</td>
+    <td><a href="weapp">weapp</a></td>
+    <td>微信审核被拒了，先晾着吧</td>
+  </tr>
+</table>
+
+## 推荐
+
+基于本项目的其它开源项目推荐，欢迎 PR 推荐你的项目过来哦 ~
+
+- [dj940212/hongbao-bot](https://github.com/dj940212/hongbao-bot) - 外卖红包微信机器人（nodejs）
+- [chengzijian/ai-hongbao](https://github.com/chengzijian/ai-hongbao) - 微信机器人号领外卖红包（python）
+- [lt94/package-qqbot](https://github.com/lt94/package-qqbot) - qq机器人号领外卖红包（python）
 
 ## 交流群
 
@@ -22,10 +47,10 @@
   </tr>
   <tr></tr>
   <tr>
-    <td align="center" width="300">
-      <img src="https://user-images.githubusercontent.com/8413791/36705353-b2bf4c4c-1b9f-11e8-9c8c-be67de500ad2.png"><p>请加上面的微信号邀请你入群</p>
+    <td align="center" width="250">
+      <img src="web/src/static/qrcode.jpg"><p>请加上面的微信号邀请你入群</p>
     </td>
-    <td align="center" width="300"><a href="https://shang.qq.com/wpa/qunwpa?idkey=ce7ff4d1b5050c3bafff8f16c3cae4b1eec37916053865b86527347d680e03ec">246080018</a></td>
+    <td align="center" width="250"><a href="https://shang.qq.com/wpa/qunwpa?idkey=ce7ff4d1b5050c3bafff8f16c3cae4b1eec37916053865b86527347d680e03ec">246080018</a></td>
   </tr>
 </table>
 
